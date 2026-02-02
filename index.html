@@ -110,7 +110,7 @@
         .hero {
             margin-top: 80px;
             min-height: 100vh;
-            background-image: linear-gradient(rgba(58, 74, 46, 0.6), rgba(58, 74, 46, 0.4)), url('Imagen_de_WhatsApp_2025-01-13_a_las_09_48_21_1bba4ad0.jpg');
+            background-image: linear-gradient(rgba(58, 74, 46, 0.6), rgba(58, 74, 46, 0.4)), url('/mnt/user-data/uploads/Imagen_de_WhatsApp_2025-01-13_a_las_09_48_21_1bba4ad0.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -320,8 +320,8 @@
 
         /* Características destacadas */
         .features-highlight {
-            background: linear-gradient(135deg, var(--oliva-oscuro) 0%, var(--oliva-medio) 100%);
-            color: var(--blanco);
+            background: linear-gradient(135deg, #f8f6f0 0%, #e8dfc7 100%);
+            color: var(--texto-oscuro);
         }
 
         .features-grid {
@@ -333,17 +333,17 @@
         .feature-card {
             text-align: center;
             padding: 2.5rem;
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--blanco);
             border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--arena);
             transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--dorado);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .feature-icon {
@@ -355,12 +355,13 @@
         .feature-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--dorado-claro);
+            color: var(--dorado);
         }
 
         .feature-card p {
-            opacity: 0.9;
+            opacity: 0.85;
             line-height: 1.7;
+            color: var(--texto-oscuro);
         }
 
         /* Amenidades */
@@ -846,7 +847,7 @@
     <!-- Navegación -->
     <nav>
         <div class="nav-container">
-            <img src="Logo_vertical_story.png" alt="Oliver's Garden Hotel" class="logo-nav">
+            <img src="/mnt/user-data/uploads/Logo_vertical_story.png" alt="Oliver's Garden Hotel" class="logo-nav">
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#habitaciones">Habitaciones</a></li>
@@ -861,7 +862,7 @@
     <!-- Hero -->
     <section class="hero" id="inicio">
         <div class="hero-container">
-            <img src="Logo_vertical_story.png" alt="Oliver's Garden Hotel Campestre" class="hero-logo">
+            <img src="/mnt/user-data/uploads/Logo_vertical_story.png" alt="Oliver's Garden Hotel Campestre" class="hero-logo">
             <div class="hero-badge">🏆 Calificación Perfecta 10/10 · Top 10% Mundial</div>
             <h1>Tu Escape Campestre en Chincha</h1>
             <p>Descubre el paraíso a solo 2.5 horas de Lima. Piscina, jardines, gastronomía y la tranquilidad que mereces. Pet Friendly 🐾</p>
@@ -878,28 +879,28 @@
     <section class="gallery-section">
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="Imagen_de_WhatsApp_2025-01-13_a_las_09_48_21_1bba4ad0.jpg" alt="Piscina Oliver's Garden">
+                <img src="/mnt/user-data/uploads/Imagen_de_WhatsApp_2025-01-13_a_las_09_48_21_1bba4ad0.jpg" alt="Piscina Oliver's Garden">
                 <div class="gallery-overlay">
                     <h3>Piscina Refrescante</h3>
                     <p>Relájate bajo el sol peruano</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="cuarto1.jpg" alt="Habitación con balcón">
+                <img src="/mnt/user-data/uploads/cuarto1.jpg" alt="Habitación con balcón">
                 <div class="gallery-overlay">
                     <h3>Habitaciones Confortables</h3>
                     <p>Con balcón y vista al jardín</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="trago5.jpg" alt="Bar y cócteles">
+                <img src="/mnt/user-data/uploads/trago5.jpg" alt="Bar y cócteles">
                 <div class="gallery-overlay">
                     <h3>Bar & Cócteles</h3>
                     <p>Disfruta al borde de la piscina</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="Fondo_de_noches.jpg" alt="Terraza nocturna">
+                <img src="/mnt/user-data/uploads/Fondo_de_noches.jpg" alt="Terraza nocturna">
                 <div class="gallery-overlay">
                     <h3>Noches Mágicas</h3>
                     <p>Ambiente perfecto para eventos</p>
@@ -913,8 +914,8 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Nuestro Compromiso</div>
-                <h2 style="color: var(--blanco);">¿Por Qué Oliver's Garden?</h2>
-                <p style="color: rgba(255, 255, 255, 0.9);">Calidad, confort y hospitalidad que nos distinguen</p>
+                <h2 style="color: var(--oliva-oscuro);">¿Por Qué Oliver's Garden?</h2>
+                <p style="color: var(--texto-oscuro); opacity: 0.85;">Calidad, confort y hospitalidad que nos distinguen</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
@@ -961,7 +962,7 @@
             </div>
             <div class="habitacion-showcase">
                 <div class="habitacion-image">
-                    <img src="cuarto1.jpg" alt="Habitación con balcón Oliver's Garden">
+                    <img src="/mnt/user-data/uploads/cuarto1.jpg" alt="Habitación con balcón Oliver's Garden">
                 </div>
                 <div class="habitacion-info">
                     <h3>Habitaciones Superiores</h3>
@@ -1140,7 +1141,7 @@
                     </div>
                     <div class="contacto-item">
                         <h3>✉️ Email</h3>
-                        <a href="/cdn-cgi/l/email-protection#0f606366796a7d7c686e7d6b6a6167607b6a634f68626e6663216c6062"><span class="__cf_email__" data-cfemail="f09f9c998695828397918294959e989f84959cb0979d91999cde939f9d">[email&#160;protected]</span></a>
+                        <a href="/cdn-cgi/l/email-protection#ea8586839c8f98998d8b988e8f8482859e8f86aa8d878b8386c4898587"><span class="__cf_email__" data-cfemail="d9b6b5b0afbcabaabeb8abbdbcb7b1b6adbcb599beb4b8b0b5f7bab6b4">[email&#160;protected]</span></a>
                         <p style="margin-top: 0.8rem; font-size: 0.95rem; opacity: 0.7;">Cotizaciones y consultas generales</p>
                     </div>
                     <div class="contacto-item">
@@ -1196,7 +1197,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <img src="Logo_vertical_story.png" alt="Oliver's Garden Hotel" class="footer-logo">
+            <img src="/mnt/user-data/uploads/Logo_vertical_story.png" alt="Oliver's Garden Hotel" class="footer-logo">
             <p class="footer-text">
                 Tu refugio campestre en el corazón de Chincha. Pet friendly, familiar y acogedor.<br>
                 Escapa del caos de Lima y descubre la auténtica cultura peruana.
@@ -1205,7 +1206,7 @@
                 <a href="https://www.instagram.com/oliversgardenhotel" target="_blank">📷</a>
                 <a href="https://www.facebook.com/profile.php?id=61555551431887" target="_blank">📘</a>
                 <a href="https://wa.me/51988445020" target="_blank">💬</a>
-                <a href="/cdn-cgi/l/email-protection#dcb3b0b5aab9aeafbbbdaeb8b9b2b4b3a8b9b09cbbb1bdb5b0f2bfb3b1">✉️</a>
+                <a href="/cdn-cgi/l/email-protection#117e7d786774636276706375747f797e65747d51767c70787d3f727e7c">✉️</a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Oliver's Garden Hotel Campestre. Todos los derechos reservados.</p>

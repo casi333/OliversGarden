@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliver's Garden Hotel Campestre - Chincha, Perú</title>
+    <meta name="description" content="Hotel campestre en Chincha. Piscina, restaurante, bar y jardines. Pet friendly. Escapa de Lima y disfruta de la tranquilidad.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --oliva-oscuro: #3d4a2e;
+            --oliva-medio: #5a6b47;
+            --dorado: #c9a961;
+            --dorado-claro: #d9ba7a;
+            --ladrillo: #8b5442;
+            --crema: #f8f6f0;
+            --arena: #e8dfc7;
+            --blanco: #ffffff;
+            --texto-oscuro: #2a2a2a;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+            background: var(--crema);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Navegación */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-nav {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--texto-oscuro);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover {
+            color: var(--dorado);
+        }
+
+        .reserva-btn {
+            background: linear-gradient(135deg, var(--dorado) 0%, var(--dorado-claro) 100%);
+            color: var(--texto-oscuro);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+        }
+
+        .reserva-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 169, 97, 0.4);
+        }
+
+        /* Hero */
+        .hero {
+            margin-top: 80px;
+            min-height: 100vh;
+            background-image: linear-gradient(rgba(58, 74, 46, 0.6), rgba(58, 74, 46, 0.4)), url('/mnt/user-data/uploads/Imagen_de_WhatsApp_2025-01-13_a_las_09_48_21_1bba4ad0.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to top, var(--crema), transparent);
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-logo {
+            max-width: 280px;
+            margin: 0 auto 2rem;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+            animation: fadeIn 1s ease;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(201, 169, 97, 0.9);
+            color: var(--texto-oscuro);
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: var(--blanco);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: var(--blanco);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--dorado) 0%, var(--dorado-claro) 100%);
+            color: var(--texto-oscuro);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 25px rgba(201, 169, 97, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(201, 169, 97, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--blanco);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Secciones */
+        section {
+            padding: 6rem 3rem;
+        }
+
+        section:nth-child(even) {
+            background: var(--blanco);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-subtitle {
+            color: var(--dorado);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            color: var(--oliva-oscuro);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--texto-oscuro);
+            opacity: 0.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Galería Hero */
+        .gallery-section {
+            background: var(--oliva-oscuro);
+            padding: 0;
+            position: relative;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 500px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 2rem;
+            color: var(--blanco);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Características destacadas */
+        .features-highlight {
+            background: linear-gradient(135deg, #f8f6f0 0%, #e8dfc7 100%);
+            color: var(--texto-oscuro);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2.5rem;
+            background: var(--blanco);
+            border-radius: 20px;
+            border: 2px solid var(--arena);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--dorado);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dorado);
+        }
+
+        .feature-card p {
+            opacity: 0.85;
+            line-height: 1.7;
+            color: var(--texto-oscuro);
+        }
+
+        /* Amenidades */
+        .amenidades-section {
+            background: var(--crema);
+        }
+
+        .amenidades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .amenidad-card {
+            background: var(--blanco);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--dorado);
+        }
+
+        .amenidad-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .amenidad-header {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .amenidad-icon {
+            font-size: 3rem;
+        }
+
+        .amenidad-card h3 {
+            font-size: 1.6rem;
+            color: var(--oliva-oscuro);
+        }
+
+        .amenidad-card p {
+            color: var(--texto-oscuro);
+            opacity: 0.85;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Habitaciones */
+        .habitaciones-section {
+            background: var(--blanco);
+        }
+
+        .habitacion-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .habitacion-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        .habitacion-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .habitacion-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .habitacion-info {
+            padding: 2rem;
+        }
+
+        .habitacion-info h3 {
+            font-size: 2.5rem;
+            color: var(--oliva-oscuro);
+            margin-bottom: 1.5rem;
+        }
+
+        .habitacion-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .habitacion-features li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--arena);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .habitacion-features li:last-child {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            color: var(--dorado);
+            font-weight: bold;
+        }
+
+        /* Ubicación */
+        .ubicacion-section {
+            background: var(--crema);
+        }
+
+        .ubicacion-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .ubicacion-info h3 {
+            font-size: 2.2rem;
+            color: var(--oliva-oscuro);
+            margin-bottom: 2rem;
+        }
+
+        .ubicacion-list {
+            list-style: none;
+        }
+
+        .ubicacion-list li {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: var(--blanco);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .ubicacion-list li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .ubicacion-icon {
+            font-size: 1.8rem;
+            min-width: 40px;
+        }
+
+        .ubicacion-list strong {
+            color: var(--dorado);
+            min-width: 140px;
+            font-weight: 600;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            height: 500px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Contacto */
+        .contacto-section {
+            background: var(--blanco);
+        }
+
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+        }
+
+        .contacto-info {
+            background: var(--crema);
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .contacto-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--arena);
+        }
+
+        .contacto-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contacto-item h3 {
+            color: var(--oliva-oscuro);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .contacto-item a {
+            color: var(--dorado);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .contacto-item a:hover {
+            color: var(--oliva-oscuro);
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--oliva-oscuro) 0%, var(--oliva-medio) 100%);
+            padding: 4rem;
+            border-radius: 25px;
+            color: var(--blanco);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 169, 97, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-box h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--blanco);
+        }
+
+        .cta-box p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: var(--blanco);
+            padding: 1.3rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn:hover {
+            background: #20BA5A;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        .rating-badges {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .rating-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .rating-badge strong {
+            display: block;
+            font-size: 2rem;
+            color: var(--dorado-claro);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.3rem;
+        }
+
+        .rating-badge span {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--oliva-oscuro);
+            color: var(--blanco);
+            padding: 4rem 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            max-width: 200px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .footer-text {
+            opacity: 0.85;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-links a:hover {
+            background: var(--dorado);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(201, 169, 97, 0.3);
+        }
+
+        .footer-bottom {
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.95rem;
+            margin-top: 2rem;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                height: 600px;
+            }
+
+            .habitacion-showcase,
+            .ubicacion-content,
+            .contacto-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1.5rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-logo {
+                max-width: 220px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .gallery-item {
+                height: 300px;
+            }
+
+            .features-grid,
+            .amenidades-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-primary,
+            .btn-secondary,
+            .whatsapp-btn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .habitacion-image img {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <img src="/mnt/user-data/uploads/Logo_vertical_story.png" alt="Oliver's Garden Hotel" class="logo-nav">
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#habitaciones">Habitaciones</a></li>
+                <li><a href="#amenidades">Amenidades</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="#contacto" class="reserva-btn">Reservar</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <img src="/mnt/user-data/uploads/Logo_vertical_story.png" alt="Oliver's Garden Hotel Campestre" class="hero-logo">
+            <div class="hero-badge">🏆 Calificación Perfecta 10/10 · Top 10% Mundial</div>
+            <h1>Tu Escape Campestre en Chincha</h1>
+            <p>Descubre el paraíso a solo 2.5 horas de Lima. Piscina, jardines, gastronomía y la tranquilidad que mereces. Pet Friendly 🐾</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/51988445020?text=Hola!%20Me%20gustaría%20reservar%20en%20Oliver's%20Garden" class="btn-primary">
+                    <span>💬</span> Reservar por WhatsApp
+                </a>
+                <a href="#amenidades" class="btn-secondary">Conocer Más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/Imagen_de_WhatsApp_2025-01-13_a_las_09_48_21_1bba4ad0.jpg" alt="Piscina Oliver's Garden">
+                <div class="gallery-overlay">
+                    <h3>Piscina Refrescante</h3>
+                    <p>Relájate bajo el sol peruano</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/cuarto1.jpg" alt="Habitación con balcón">
+                <div class="gallery-overlay">
+                    <h3>Habitaciones Confortables</h3>
+                    <p>Con balcón y vista al jardín</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/trago5.jpg" alt="Bar y cócteles">
+                <div class="gallery-overlay">
+                    <h3>Bar & Cócteles</h3>
+                    <p>Disfruta al borde de la piscina</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/Fondo_de_noches.jpg" alt="Terraza nocturna">
+                <div class="gallery-overlay">
+                    <h3>Noches Mágicas</h3>
+                    <p>Ambiente perfecto para eventos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="features-highlight">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Nuestro Compromiso</div>
+                <h2 style="color: var(--oliva-oscuro);">¿Por Qué Oliver's Garden?</h2>
+                <p style="color: var(--texto-oscuro); opacity: 0.85;">Calidad, confort y hospitalidad que nos distinguen</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">⭐</span>
+                    <h3>Top 10% Mundial</h3>
+                    <p>Reconocidos por Tripadvisor entre los mejores hoteles del mundo. Excelencia comprobada.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💯</span>
+                    <h3>Calificación Perfecta</h3>
+                    <p>10/10 en Booking.com. Nuestros huéspedes avalan nuestra calidad con sus experiencias.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🐾</span>
+                    <h3>Pet Friendly</h3>
+                    <p>Tu mascota es parte de la familia. Tráela sin preocupaciones y disfruten juntos.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">👨‍👩‍👧‍👦</span>
+                    <h3>100% Familiar</h3>
+                    <p>Ambiente seguro y cálido con áreas de juego para niños. Diversión para toda la familia.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🌳</span>
+                    <h3>Entorno Natural</h3>
+                    <p>Rodeado de jardines y aire puro. El escape perfecto del caos de la ciudad.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🅿️</span>
+                    <h3>Todo Incluido</h3>
+                    <p>Estacionamiento gratuito, WiFi, piscina y todas las comodidades sin cargos adicionales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habitaciones -->
+    <section id="habitaciones" class="habitaciones-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Alojamiento</div>
+                <h2>Habitaciones Diseñadas para Tu Confort</h2>
+                <p>Espacios amplios con detalles rústicos y todas las comodidades modernas</p>
+            </div>
+            <div class="habitacion-showcase">
+                <div class="habitacion-image">
+                    <img src="/mnt/user-data/uploads/cuarto1.jpg" alt="Habitación con balcón Oliver's Garden">
+                </div>
+                <div class="habitacion-info">
+                    <h3>Habitaciones Superiores</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--texto-oscuro); opacity: 0.85;">
+                        Espacios pensados para tu descanso absoluto. Cada detalle está cuidado para brindarte la mejor experiencia campestre con el confort que mereces.
+                    </p>
+                    <ul class="habitacion-features">
+                        <li><span class="check-icon">✓</span> Balcón privado con vista al jardín</li>
+                        <li><span class="check-icon">✓</span> Cama Queen Size de lujo</li>
+                        <li><span class="check-icon">✓</span> Smart TV con streaming</li>
+                        <li><span class="check-icon">✓</span> Baño privado completo</li>
+                        <li><span class="check-icon">✓</span> Aire acondicionado y calefacción</li>
+                        <li><span class="check-icon">✓</span> WiFi de alta velocidad</li>
+                        <li><span class="check-icon">✓</span> Detalles rústicos en madera y ladrillo</li>
+                        <li><span class="check-icon">✓</span> Artículos de aseo de cortesía</li>
+                    </ul>
+                    <a href="https://wa.me/51988445020?text=Hola!%20Quisiera%20información%20sobre%20las%20habitaciones" class="btn-primary" style="margin-top: 1rem;">
+                        <span>📱</span> Consultar Disponibilidad
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenidades -->
+    <section id="amenidades" class="amenidades-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Instalaciones</div>
+                <h2>Todo lo que Necesitas en un Solo Lugar</h2>
+                <p>Disfruta de nuestras amenidades pensadas para tu entretenimiento y comodidad</p>
+            </div>
+            <div class="amenidades-grid">
+                <div class="amenidad-card">
+                    <div class="amenidad-header">
+                        <span class="amenidad-icon">🏊</span>
+                        <h3>Piscina al Aire Libre</h3>
+                    </div>
+                    <p>Amplia piscina rodeada de jardines y palmeras. Zona de descanso con tumbonas y sombrillas. Perfecta para refrescarte y disfrutar del clima de Chincha.</p>
+                </div>
+                <div class="amenidad-card">
+                    <div class="amenidad-header">
+                        <span class="amenidad-icon">🍽️</span>
+                        <h3>Restaurante Campestre</h3>
+                    </div>
+                    <p>Cocina tradicional de Chincha con ingredientes frescos. Prueba la auténtica gastronomía afroperuana en un ambiente acogedor y familiar.</p>
+                </div>
+                <div class="amenidad-card">
+                    <div class="amenidad-header">
+                        <span class="amenidad-icon">🍹</span>
+                        <h3>Bar & Lounge</h3>
+                    </div>
+                    <p>Cócteles artesanales, pisco sour y bebidas refrescantes. Disfruta al borde de la piscina o en nuestra terraza con ambiente nocturno único.</p>
+                </div>
+                <div class="amenidad-card">
+                    <div class="amenidad-header">
+                        <span class="amenidad-icon">🔥</span>
+                        <h3>Área de Parrilla</h3>
+                    </div>
+                    <p>Zona equipada para asados al aire libre. Vive la experiencia campestre completa con tu familia preparando tus propias comidas.</p>
+                </div>
+                <div class="amenidad-card">
+                    <div class="amenidad-header">
+                        <span class="amenidad-icon">🏪</span>
+                        <h3>Minimarket</h3>
+                    </div>
+                    <p>Tienda de conveniencia con snacks, bebidas y artículos esenciales. Todo lo que necesitas sin salir del hotel.</p>
+                </div>
+                <div class="amenidad-card">
+                    <div class="amenidad-header">
+                        <span class="amenidad-icon">🎮</span>
+                        <h3>Zona de Juegos</h3>
+                    </div>
+                    <p>Área recreativa para niños con juegos y espacios seguros. Los pequeños se divertirán mientras tú disfrutas tu descanso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion" class="ubicacion-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Cómo Llegar</div>
+                <h2>Ubicación Estratégica en Chincha</h2>
+                <p>Fácil acceso desde Lima y cerca de los principales atractivos de la región</p>
+            </div>
+            <div class="ubicacion-content">
+                <div class="ubicacion-info">
+                    <h3>Encuentra Tu Camino a Nosotros</h3>
+                    <ul class="ubicacion-list">
+                        <li>
+                            <span class="ubicacion-icon">📍</span>
+                            <div>
+                                <strong>Dirección</strong>
+                                <span>Jirón Barrio Progreso, Grocio Prado, Chincha Alta, Ica</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="ubicacion-icon">🚗</span>
+                            <div>
+                                <strong>Desde Lima</strong>
+                                <span>2.5 horas por Panamericana Sur (200 km)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="ubicacion-icon">🏛️</span>
+                            <div>
+                                <strong>Centro Ica</strong>
+                                <span>46 km - 40 minutos en auto</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="ubicacion-icon">🏖️</span>
+                            <div>
+                                <strong>Huacachina</strong>
+                                <span>50 km - 45 minutos (oasis y dunas)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="ubicacion-icon">✈️</span>
+                            <div>
+                                <strong>Aeropuerto</strong>
+                                <span>53 km de Pisco (Capitán FAP Renán Elías Olivera)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="ubicacion-icon">🛍️</span>
+                            <div>
+                                <strong>Megaplaza</strong>
+                                <span>10 minutos - Centro comercial</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 2rem; padding: 2rem; background: var(--blanco); border-radius: 15px; border-left: 4px solid var(--dorado);">
+                        <strong style="color: var(--oliva-oscuro); display: block; margin-bottom: 0.8rem; font-size: 1.1rem;">💡 Explora Chincha</strong>
+                        <p style="color: var(--texto-oscuro); opacity: 0.85; line-height: 1.7;">
+                            Chincha es la cuna de la música afroperuana y destino gastronómico imperdible. A minutos del hotel encontrarás restaurantes con carapulcra, sopa seca, y los mejores alfajores de la región.
+                        </p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.8287951234567!2d-76.1345678!3d-13.4567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110e2c5f8d9c123%3A0x1a2b3c4d5e6f7g8h!2sOliver&#39;s%20Garden%20Hotel!5e0!3m2!1ses!2spe!4v1234567890123!5m2!1ses!2spe"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación Oliver's Garden Hotel">
+                    </iframe>
+                    <div style="position: absolute; bottom: 20px; left: 20px; background: white; padding: 15px 25px; border-radius: 50px; box-shadow: 0 5px 20px rgba(0,0,0,0.2);">
+                        <a href="https://maps.app.goo.gl/pkEbT7wwVfCKRms4A" target="_blank" style="text-decoration: none; color: var(--oliva-oscuro); font-weight: 600; display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 1.3rem;">🗺️</span>
+                            <span>Ver en Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Reservas</div>
+                <h2>Planifica Tu Estadía</h2>
+                <p>Estamos aquí para hacer tu experiencia inolvidable</p>
+            </div>
+            <div class="contacto-grid">
+                <div class="contacto-info">
+                    <div class="contacto-item">
+                        <h3>📱 WhatsApp</h3>
+                        <a href="https://wa.me/51988445020">+51 988 445 020</a>
+                        <a href="https://wa.me/51990241823">+51 990 241 823</a>
+                        <p style="margin-top: 0.8rem; font-size: 0.95rem; opacity: 0.7;">Respuesta inmediata para reservas</p>
+                    </div>
+                    <div class="contacto-item">
+                        <h3>✉️ Email</h3>
+                        <a href="/cdn-cgi/l/email-protection#ea8586839c8f98998d8b988e8f8482859e8f86aa8d878b8386c4898587"><span class="__cf_email__" data-cfemail="d9b6b5b0afbcabaabeb8abbdbcb7b1b6adbcb599beb4b8b0b5f7bab6b4">[email&#160;protected]</span></a>
+                        <p style="margin-top: 0.8rem; font-size: 0.95rem; opacity: 0.7;">Cotizaciones y consultas generales</p>
+                    </div>
+                    <div class="contacto-item">
+                        <h3>📍 Dirección</h3>
+                        <p style="line-height: 1.8; color: var(--texto-oscuro); opacity: 0.85;">
+                            Jirón Barrio Progreso<br>
+                            Grocio Prado, Chincha Alta<br>
+                            Ica 11703, Perú
+                        </p>
+                    </div>
+                    <div class="contacto-item">
+                        <h3>🕐 Horarios</h3>
+                        <p style="line-height: 1.8; color: var(--texto-oscuro); opacity: 0.85;">
+                            <strong style="color: var(--dorado);">Check-in:</strong> 3:00 PM<br>
+                            <strong style="color: var(--dorado);">Check-out:</strong> 12:00 PM<br>
+                            <span style="font-size: 0.9rem; opacity: 0.7;">Recepción 24/7</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="cta-box">
+                    <div class="cta-content">
+                        <h3>¿Listo para Tu Escapada?</h3>
+                        <p>Reserva ahora y asegura tu lugar en el paraíso campestre de Chincha. Te esperamos con los brazos abiertos.</p>
+                        <a href="https://wa.me/51988445020?text=Hola!%20Me%20gustaría%20reservar%20en%20Oliver's%20Garden%20Hotel" class="whatsapp-btn">
+                            <span style="font-size: 1.4rem;">💬</span>
+                            <span>Reservar por WhatsApp</span>
+                        </a>
+                        <div class="rating-badges">
+                            <div class="rating-badge">
+                                <strong>10/10</strong>
+                                <span>Booking.com</span>
+                            </div>
+                            <div class="rating-badge">
+                                <strong>Top 10%</strong>
+                                <span>Tripadvisor</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/oliversgardenhotel" target="_blank" title="Instagram">📷</a>
+                            <a href="https://www.facebook.com/profile.php?id=61555551431887" target="_blank" title="Facebook">📘</a>
+                        </div>
+                        <p style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.85;">
+                            ✅ Cancelación flexible disponible<br>
+                            🐾 Mascotas bienvenidas sin cargo<br>
+                            🅿️ Estacionamiento gratuito incluido
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <img src="/mnt/user-data/uploads/Logo_vertical_story.png" alt="Oliver's Garden Hotel" class="footer-logo">
+            <p class="footer-text">
+                Tu refugio campestre en el corazón de Chincha. Pet friendly, familiar y acogedor.<br>
+                Escapa del caos de Lima y descubre la auténtica cultura peruana.
+            </p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/oliversgardenhotel" target="_blank">📷</a>
+                <a href="https://www.facebook.com/profile.php?id=61555551431887" target="_blank">📘</a>
+                <a href="https://wa.me/51988445020" target="_blank">💬</a>
+                <a href="/cdn-cgi/l/email-protection#117e7d786774636276706375747f797e65747d51767c70787d3f727e7c">✉️</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Oliver's Garden Hotel Campestre. Todos los derechos reservados.</p>
+                <p style="margin-top: 0.5rem;">Chincha Alta, Ica, Perú · 🏆 Top 10% Mundial · ⭐ 10/10</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Navegación con scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targe
